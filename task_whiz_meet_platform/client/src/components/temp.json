@@ -1,0 +1,54 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```\n{\n  \"tasks\": [\n    {\n      \"task_id\": \"AI123\",\n      \"task_name\": \"Generate tasks from meeting notes using AI\",\n      \"task_description\": \"Develop an AI-powered feature that automatically generates tasks from meeting notes, capturing key action items and assigning them to appropriate team members.\",\n      \"task_status\": \"to_do\",\n      \"task_due_date\": null,\n      \"task_assign_to\": [],\n      \"task_dependencies\": [],\n      \"task_skills\": [\"Artificial Intelligence\", \"Natural Language Processing\"],\n      \"task_priority\": \"high\",\n      \"basePointCalculation\": 120\n    },\n    {\n      \"task_id\": \"SE124\",\n      \"task_name\": \"Suggest best employees for task assignment\",\n      \"task_description\": \"Implement a feature that analyzes employee skills, availability, and workload to suggest the most suitable individuals for specific tasks, ensuring optimal resource allocation.\",\n      \"task_status\": \"to_do\",\n      \"task_due_date\": null,\n      \"task_assign_to\": [],\n      \"task_dependencies\": [\"AI123\"],\n      \"task_skills\": [\"Data Analysis\", \"Machine Learning\"],\n      \"task_priority\": \"high\",\n      \"basePointCalculation\": 120\n    },\n    {\n      \"task_id\": \"DB125\",\n      \"task_name\": \"Set up database for project\",\n      \"task_description\": \"Establish a robust database infrastructure to store and manage project-related data, ensuring data integrity, security, and accessibility.\",\n      \"task_status\": \"to_do\",\n      \"task_due_date\": \"29 February 2023\",\n      \"task_assign_to\": [\"Abhishek\"],\n      \"task_dependencies\": [],\n      \"task_skills\": [\"Database Design\", \"SQL\"],\n      \"task_priority\": \"medium\",\n      \"basePointCalculation\": 70\n    }\n  ]\n}\n```"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0,
+      "safetyRatings": [
+        {
+          "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+          "probability": "NEGLIGIBLE"
+        },
+        {
+          "category": "HARM_CATEGORY_HATE_SPEECH",
+          "probability": "NEGLIGIBLE"
+        },
+        {
+          "category": "HARM_CATEGORY_HARASSMENT",
+          "probability": "NEGLIGIBLE"
+        },
+        {
+          "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+          "probability": "NEGLIGIBLE"
+        }
+      ]
+    }
+  ],
+  "promptFeedback": {
+    "safetyRatings": [
+      {
+        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+        "probability": "NEGLIGIBLE"
+      },
+      {
+        "category": "HARM_CATEGORY_HATE_SPEECH",
+        "probability": "NEGLIGIBLE"
+      },
+      {
+        "category": "HARM_CATEGORY_HARASSMENT",
+        "probability": "NEGLIGIBLE"
+      },
+      {
+        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+        "probability": "NEGLIGIBLE"
+      }
+    ]
+  }
+}
