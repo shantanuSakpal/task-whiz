@@ -28,6 +28,11 @@ import { BsPinFill as PinActiveIcon } from "react-icons/bs";
 import { QRCode } from "react-qrcode-logo";
 import MeetGridCard from "../components/MeetGridCard";
 
+// import firestore
+import { firestore as db } from "../firebase/config";
+
+import { collection, addDoc } from "firebase/firestore";
+
 // framer motion
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -230,6 +235,30 @@ const Room = () => {
     return peer;
   };
 
+  const handleEndCall = async () => {
+    socket.current.emit("get user transcript", {
+      name: user.displayName,
+      transcript: transcript,
+    });
+    socket.current.disconnect();
+    try {
+      const response = await fetch(
+        "http://taskwhiz.socket.onrender.com/getTasks"
+      );
+      const data = await response.json();
+
+      data.forEach(async (task) => {
+        await addDoc(collection(db, "task"), task);
+      });
+    } catch (err) {
+      console.log(err);
+    }
+    navigate("/");
+    // window.location.reload();
+
+    // use fetch api to make a get request on http://taskwhiz.socket.onrender.com/getTasks and get the tasks json
+  };
+
   return (
     <>
       {user ? (
@@ -398,14 +427,7 @@ const Room = () => {
                       <div className="flex-grow flex justify-center">
                         <button
                           className="py-2 px-4 flex items-center gap-2 rounded-lg bg-red"
-                          onClick={() => {
-                            socket.current.emit("get user transcript", {
-                              name: user.displayName,
-                              transcript: transcript,
-                            });
-                            socket.current.disconnect();
-                            navigate("/");
-                          }}
+                          onClick={handleEndCall}
                         >
                           <CallEndIcon size={20} />
                           <span className="hidden sm:block text-xs">
