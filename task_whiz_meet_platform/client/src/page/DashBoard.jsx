@@ -4,6 +4,7 @@ import BarChart from "../components/BarChart";
 import RadarChart from "../components/RadarChart";
 import Card from "../components/Cards";
 import Table from "../components/Table";
+import { Link } from "react-router-dom";
 
 export default function DashBoard() {
 	const lineTimeArr = ["09:45:40", "09:45:41", "09:45:41", "09:45:42", "09:45:42", "09:45:43"];
@@ -33,14 +34,20 @@ export default function DashBoard() {
 						</svg>
 						<span> March 10, 2024</span>
 					</button>
-					<button className="rounded-lg px-4 py-3 bg-white text-black">Go Back</button>
+					<Link to={"/"} className="rounded-lg px-4 py-3 bg-accent-purple text-white">
+						Go Back
+					</Link>
 				</div>
 			</div>
 			<div className="flex items-center w-full justify-between gap-3 mt-3">
-				<Card title={"Total Depression"} value={"+4,82,974"} subTitle={"+20.1% from last month"} />
-				<Card title={"Total Anxeity"} value={"Value"} subTitle={"+20.1% from last month"} />
-				<Card title={"Suicide Rate"} value={"Value"} subTitle={"+20.1% from last month"} />
-				<Card title={"Total Depression"} value={"$45,231.89"} subTitle={"+20.1% from last month"} />
+				<Card title={"Total Students Mentored"} value={"+40"} subTitle={"+5.1% from last month"} />
+				<Card title={"Total Sessions Conducted"} value={"36"} subTitle={"+12.2% from last month"} />
+				<Card
+					title={"Average Session Duration"}
+					value={"48 mins"}
+					subTitle={"-7.3% from last month"}
+				/>
+				<Card title={"Engagement Rate"} value={"64.91 %"} subTitle={"+11.1% from last month"} />
 			</div>
 			<div className="flex mt-4">
 				{/* <LineChart timeArr={lineTimeArr} dataArr={lineDataArr} label={"Name"} /> */}

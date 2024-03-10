@@ -9,10 +9,10 @@ export default function Table() {
 			<p className="mt-1 text-sm font-normal text-zinc-500">
 				These are the students who had shown the most progress this week!!
 			</p>
-			<Row name="John Doe" progress="90%" />
-			<Row name="John Doe" progress="90%" />
-			<Row name="John Doe" progress="90%" />
-			<Row name="John Doe" progress="90%" />
+			<Row name="Bhaumik Kore" progress="20%" />
+			<Row name="Abhishek Sinha" progress="17%" />
+			<Row name="Shantanu Sakpal" progress="18%" />
+			<Row name="Harsh Shetye" progress="15%" />
 		</div>
 	);
 }

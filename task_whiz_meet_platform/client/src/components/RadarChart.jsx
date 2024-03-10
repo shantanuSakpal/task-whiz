@@ -26,6 +26,7 @@ export default function RadarChart({ timeArr, dataArr, label }) {
 		if (chartRef.current) {
 			chartInstance = new Chart(chartRef.current, {
 				type: "radar",
+				// type: "polarArea",
 				data: {
 					labels: timeArr,
 					datasets: [
@@ -34,7 +35,9 @@ export default function RadarChart({ timeArr, dataArr, label }) {
 							data: dataArr,
 							fill: true,
 							pointRadius: 0,
-							//   borderColor: "rgb(75, 192, 192)",
+							borderWidth: 1,
+							backgroundColor: "rgb(94, 24, 150,0.4)",
+							borderColor: "#5E1896",
 							tension: 0.1,
 						},
 					],
@@ -63,7 +66,7 @@ export default function RadarChart({ timeArr, dataArr, label }) {
 	}, [dataArr.length]);
 
 	return (
-		<div className=" w-[28rem]">
+		<div className=" w-[32rem]">
 			<canvas id="new" ref={chartRef} />
 		</div>
 	);

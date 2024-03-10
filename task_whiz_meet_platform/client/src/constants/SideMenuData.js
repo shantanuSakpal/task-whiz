@@ -8,38 +8,38 @@ import { SiGooglemeet } from "react-icons/si";
 import { IoMdAnalytics } from "react-icons/io";
 
 export const sideMenuData = [
-  {
-    text: "Dashboard",
-    icon: <MdSpaceDashboard />,
-    route: "/dashboard",
-  },
-  {
-    text: "Teams",
-    icon: <RiTeamFill />,
-    route: "/teams",
-  },
-  {
-    text: "Chat",
-    icon: <SiGooglechat />,
-    route: "/chat",
-  },
-  {
-    text: "Meet",
-    icon: <SiGooglemeet />,
-    route: "/meet",
-  },
-  {
-    text: "Analytics",
-    icon: <IoMdAnalytics />,
-    route: "/analytics",
-  },
-  // {
-  //   text: "Chat",
-  //   icon: <ChatIcon />,
-  //   route: "/chat",
-  // },
-  // {
-  //   text: "",
-  //   icon: < />,
-  // },
+	{
+		text: "Dashboard",
+		icon: <MdSpaceDashboard />,
+		route: "/dashboard",
+	},
+	// {
+	//   text: "Teams",
+	//   icon: <RiTeamFill />,
+	//   route: "/teams",
+	// },
+	// {
+	//   text: "Chat",
+	//   icon: <SiGooglechat />,
+	//   route: "/chat",
+	// },
+	{
+		text: "Meet",
+		icon: <SiGooglemeet />,
+		route: "/meet",
+	},
+	// {
+	//   text: "Analytics",
+	//   icon: <IoMdAnalytics />,
+	//   route: "/analytics",
+	// },
+	// {
+	//   text: "Chat",
+	//   icon: <ChatIcon />,
+	//   route: "/chat",
+	// },
+	// {
+	//   text: "",
+	//   icon: < />,
+	// },
 ];

@@ -84,8 +84,8 @@ console.clear();
 
 app.get('/getTasks', async (req, res) => {
   try {
-    const response = await run();
-    res.status(200).send(response);
+    // const response = await run();
+    res.status(200).send(transcript.text);
   } catch(err) {
     console.log(err);
     res.status(500).send(err);

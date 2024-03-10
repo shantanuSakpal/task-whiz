@@ -9,7 +9,7 @@ const Header = () => {
 	return (
 		<div className="h-16 px-3 bg-zinc-950 border-b-lightGray border-b-2 text-white w-full flex items-center  ">
 			<div className="flex-grow font-semibold text-2xl">
-				<Link to="/">Aivy</Link>
+				<Link to="/">AutoLearn.ai</Link>
 			</div>
 			<div>
 				{user ? (
